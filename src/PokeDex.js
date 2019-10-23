@@ -20,6 +20,8 @@ export default class PokeDex extends Component {
     return (
       <div className='PokeDex'>
         <h1>PokeDex!</h1>
+        <p>Total experience {this.props.exp}</p>
+        <p>{this.props.isWinner ? 'winner' : 'loser'}</p>
         <div className='PokeDex-card'>
           {this.props.pokemon.map(p => (
             <PokeCard id={p.id} name={p.name} type={p.type} exp={p.base_experience} />
